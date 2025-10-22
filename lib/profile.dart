@@ -1,51 +1,41 @@
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
-  const ProfileCard({super.key});
+  const ProfileCard
+({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Apan'),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.redAccent,
+        title: const Text(
+          'my profile',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        /**
-         * ROW dan COLUM BISA MEMILIKI BANYAK WIDGET
-         * ROW ITU KE SAMPING
-         * COLUM ITU KEBAWAH
-         */
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
-              width: ,
-              child: Container(
-                child: Text(
-                  'NAMA',
-                  style: TextStyle(
-                    color: Colors.amber,
-                    fontSize: 20.5,
-                    fontWeight: FontWeight.bold,
-                    backgroundColor: Colors.redAccent,
-                    fontFamily: 'poppins', // harus ada font nya
-                  ),
-                ),
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              'Apppppaaannnn',
+              style: TextStyle(
+                fontSize: 20,
+               fontWeight: FontWeight.bold,
               ),
             ),
-            Text('Apan',
-                 style: TextStyle(
-                  backgroundColor: Color.fromARGB(
-                  200, 
-                  100, 
-                  100, 
-                  100)
-              ),
-            )
+            Row(
+              children: [
+                Column(children: [],),
+                Column(children: [],),
+              ],
+            ),
           ],
         ),
       ),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
